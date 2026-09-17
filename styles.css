@@ -1,0 +1,143 @@
+:root {
+    --bg-color: #2E3440;
+    --card-bg: #3B4252;
+    --text-primary: #ECEFF4;
+    --text-secondary: #81A1C1;
+    --accent: #88C0D0;
+    --accent-hover: #A3BE8C;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.navbar a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--accent-hover);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem 0 2rem 0;
+    color: var(--text-primary);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-hover);
+}
+
+header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header p a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+header p a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.card h2 {
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--text-secondary);
+    padding-bottom: 0.5rem;
+}
+
+.standard-list {
+    padding-left: 1.5rem;
+    color: var(--text-primary);
+}
+
+.standard-list li {
+    margin-bottom: 0.5rem;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.tag-list li {
+    background: var(--accent);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+    border-radius: 4px;
+}
+
+.tag-list li:hover {
+    transform: translateY(-2px);
+}
+
+.tag-list a {
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+.tag-list.engines li:hover a {
+    font-weight: 600;
+}
+
+.wip-content {
+    text-align: center;
+}
+
+.wip-thumbnail {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 2px dashed var(--text-secondary);
+}
